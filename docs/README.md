@@ -129,10 +129,8 @@ Web API solution template which is built on Clean Architecture using .Net Core f
 | Project  | Launch URL |  Server URL |
 | -------- | ---------- |  ---------- |  
 | API | https://localhost:44396/OpenAPI/index.html | https://bookmarkwebapi20200916112033.azurewebsites.net/OpenAPI/index.html | 
-| Health check ** | https://localhost:44329/healthchecks-ui#/healthchecks | https://bookmarkweb20200916110752.azurewebsites.net/healthchecks-ui#/healthchecks  |
+| Health check | https://localhost:44329/healthchecks-ui#/healthchecks | https://bookmarkweb20200916110752.azurewebsites.net/healthcheck-ui  |
 | React UI | http://localhost:3000 | https://bookmark-dashboard.web.app/ |
-
-** Currently error in server URL
 
 
 ## Technology stack
