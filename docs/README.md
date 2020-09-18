@@ -6,7 +6,7 @@
     <img src="img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Bookmark Dashboard Web API</h3>
+  <h3 align="center">Bookmark Dashboard</h3>
 
   <p align="center">
     Web API solution template which is built on Clean Architecture using .Net Core for bookmark dashboard project!
