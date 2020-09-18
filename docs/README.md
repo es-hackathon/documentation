@@ -1,18 +1,3 @@
-Web API Badge - > 
-![.NET Core](https://github.com/es-hackathon/bookmark-dashboard-api/workflows/.NET%20Core/badge.svg)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f1ee217e5eba46a4b6e8002d4c729c5c)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=es-hackathon/bookmark-dashboard-api&amp;utm_campaign=Badge_Grade)
-
-UI Badge - > 
-![Node.js Package](https://github.com/es-hackathon/bookmark-dashboard-ui/workflows/Node.js%20Package/badge.svg)
-[![CircleCI Status](https://circleci.com/gh/es-hackathon/bookmark-dashboard-ui.svg?style=shield&circle-token=6df5acd14909e633af370a9ff340ef68a6433351)](https://app.circleci.com/pipelines/github/es-hackathon/bookmark-dashboard-ui)
-[![codecov](https://codecov.io/gh/es-hackathon/bookmark-dashboard-ui/branch/master/graph/badge.svg?token=YKML1CE6BN)](https://codecov.io/gh/es-hackathon/bookmark-dashboard-ui)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4604efb0f6954acbad55a9ae01d8981b)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=es-hackathon/bookmark-dashboard-ui&amp;utm_campaign=Badge_Grade)
-
-Widget Badge - > 
-![Node.js Package](https://github.com/es-hackathon/bookmark-dashboard-widget/workflows/Node.js%20Package/badge.svg)
-[![CircleCI Status](https://circleci.com/gh/es-hackathon/bookmark-dashboard-widget.svg?style=shield&circle-token=71828a7c9872f3347186c8ff7097160b6889853f)](https://app.circleci.com/pipelines/github/es-hackathon/bookmark-dashboard-widget)
-
-
 # Bookmark Dashboard
 
 <br />
@@ -72,34 +57,6 @@ Web API solution template which is built on Clean Architecture using .Net Core f
 
 [(open on draw.io)](./img/layer-dependencies.drawio)
 
-[reference code project](https://www.codeproject.com/Articles/5273373/Whiteapp-ASP-NET-Core-using-Onion-Architecture)
-
-### Domain layer
-
-Domain Layers (Core layer) is implemented in center and never depends on any other layer. Therefore, what we do is that we create interfaces to Persistence layer and these interfaces get implemented in the external layers. This is also known and DIP or Dependency Inversion Principle
-
-### Persistence layer
- 
-In Persistence layer where we implement reposistory design pattern. In our project, we have implement Entityframework which already implements a repository design pattern. DbContext will be UoW (Unit of Work) and each DbSet is the repository. This interacts with our database using dataproviders
-
-### Application layer 
-
-Application layer where we can implement business logic. For OLAP/OLTP process, we can implement CQRS design pattern. In our project, we have implemented CQRS design pattern on top of Mediator design pattern via MediatR libraries
-
-In case you want to implement email feature logic, we define an IMailService in the Service Layer.  Using DIP, it is easily possible to switch the implementations. This helps build scalable applications.
-
-### Infrastructure Layer
-
-In this layer, we add our third party libraries like JWT Tokens Authentication or Serilog for logging, etc.
-
-### Cross cutting concern
-
-In this layer, we add caching and other logic which will be common to all layer
-
-### Presentation Layer
-
-This can be WebApi or UI.
- 
 ## Layer examples
 
 ![layer examples](./img/layer-examples.png)
@@ -172,10 +129,15 @@ This can be WebApi or UI.
 | Project  | Launch URL |  Server URL |
 | -------- | ---------- |  ---------- |  
 | API | https://localhost:44396/OpenAPI/index.html | https://bookmarkwebapi20200916112033.azurewebsites.net/OpenAPI/index.html | 
-| Health check | https://localhost:44329/healthchecks-ui#/healthchecks | https://bookmarkweb20200916110752.azurewebsites.net/healthchecks-ui#/healthchecks  |
+| Health check ** | https://localhost:44329/healthchecks-ui#/healthchecks | https://bookmarkweb20200916110752.azurewebsites.net/healthchecks-ui#/healthchecks  |
 | React UI | http://localhost:3000 | https://bookmark-dashboard.web.app/ |
 
+** Currently error in server URL
+
+
 ## Technology stack
+
+Feature with checked is implemented in project, unchecked feature is having some issue 
 
 Architecture Pattern
 - [x] Clean architecture
@@ -240,8 +202,10 @@ npm start
 
 ### Step 3: Deploy
 
+```sh
 npm run build
 firebase deploy
+```
 
 ## About the Widget Project
 
